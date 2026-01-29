@@ -1,22 +1,67 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
+  - title: Benchmarking neural surrogates on realistic spatiotemporal multiphysics flows
+    authors: Runze Mao, et al., <strong>Xiaoyi Lu</strong>
+    conference_short: arXiv
+    conference: "arXiv preprint arXiv:2512.18595 (2025)."
+    category: scientific machine learning
 
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
-    conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
-    notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+  - title: Surrogate modeling for radiative heat transfer using physics-informed deep neural operator networks
+    authors: <strong>Xiaoyi Lu*</strong>, Yi Wang
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute <strong>40.1-4</strong> (2024): 105282."
+    category: scientific machine learning
+
+  - title: A neural surrogate solver for radiation transfer
+    authors: Aleksei Sorokin, <strong>Xiaoyi Lu*</strong>, Yi Wang
+    conference_short: "NeurIPS WS"
+    conference: "NeurIPS 2024 Workshop on Data-driven and Differentiable Simulations, Surrogates, and Solvers."
+    category: scientific machine learning
+
+  - title: "A numerical study of transport phenomena and radiation transfer in compartment and facade fires"
+    authors: <strong>Xiaoyi Lu*</strong>, et al.
+    conference_short: FSJ
+    conference: "Fire Safety Journal (2025): 104556."
+    category: computational fluid dynamics and combustion
+
+  - title: "CFD modeling of radiation emission/absorption and fuel evaporation in methanol pool fires"
+    authors: Ning Ren, <strong>Xiaoyi Lu</strong>, Yi Wang
+    conference_short: FSJ
+    conference: "Fire Safety Journal (2025): 104557."
+    category: computational fluid dynamics and combustion
+
+  - title: "Transition to detonation in inhomogeneous hydrogen-air mixtures: The importance of gradients in detonation cell size"
+    authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute 39.3 (2023): 2777-2785."
+    category: computational fluid dynamics and combustion
+
+  - title: "Predictions of flame acceleration, transition to detonation, and detonation propagation using the Chemical-Diffusive Model"
+    authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
+    conference_short: "Combust. Flame"
+    conference: "Combustion and Flame 235 (2022): 111705."
+    category: computational fluid dynamics and combustion
+
+  - title: "An efficient and accurate optimization method for the chemical-diffusive model"
+    authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
+    conference_short: "Combust. Flame"
+    conference: "Combustion and Flame 232 (2021): 111517."
+    category: computational fluid dynamics and combustion
+
+  - title: "A chemical-diffusive model for simulating detonative combustion with constrained detonation cell sizes"
+    authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
+    conference_short: "Combust. Flame"
+    conference: "Combustion and Flame 230 (2021): 111417."
+    category: computational fluid dynamics and combustion
+
+  - title: "On mass conservation and solvability of the discretized variable-density zero-Mach Navier-Stokes equations"
+    authors: <strong>Xiaoyi Lu*</strong>, Carlos Pantano
+    conference_short: JCP
+    conference: "Journal of Computational Physics 404 (2020): 109132."
+    category: computational fluid dynamics and combustion
+
+  - title: "Linear stability analysis of a premixed flame with transverse shear"
+    authors: <strong>Xiaoyi Lu*</strong>, Carlos Pantano
+    conference_short: JFM
+    conference: "Journal of Fluid Mechanics 765 (2015): 150-166."
+    category: computational fluid dynamics and combustion

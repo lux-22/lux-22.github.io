@@ -2,22 +2,19 @@
 layout: homepage
 ---
 
+<div class="page-tabs">
+  <a class="tab active" href="{{ '/' | relative_url }}">Home</a>
+  <a class="tab" href="{{ '/publications.html' | relative_url }}">Publications</a>
+</div>
+
 ## About Me
 
-I am a Ph.D. student at ...
-
-## Research Interests
-
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+I am a computational scientist specializing in computer simulation, applied mathematics, and scientific software development
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Jan. 2026]** Our paper about machine learning accelerated radiation transfer for CFD is accepted to IAFSS 2026.
 
-{% include_relative _includes/publications.md %}
+## Selected Works
 
-{% include_relative _includes/services.md %}
+{% include_relative _includes/publications.md show_heading=false category="scientific machine learning" section_title="" %}
