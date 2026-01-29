@@ -1,0 +1,8 @@
+@article{lu2020mass,
+  title={On mass conservation and solvability of the discretized variable-density zero-Mach Navier-Stokes equations},
+  author={Xiaoyi Lu and Carlos Pantano},
+  journal={Journal of Computational Physics},
+  volume={404},
+  pages={109132},
+  year={2020}
+}

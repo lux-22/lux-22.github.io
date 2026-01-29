@@ -4,64 +4,86 @@ main:
     authors: Runze Mao, et al., <strong>Xiaoyi Lu</strong>
     conference_short: arXiv
     conference: "arXiv preprint arXiv:2512.18595 (2025)."
+    pdf: https://arxiv.org/abs/2512.18595
+    bibtex: ./assets/files/bibtex/mao2025benchmarking.txt
     category: scientific machine learning
 
   - title: Surrogate modeling for radiative heat transfer using physics-informed deep neural operator networks
     authors: <strong>Xiaoyi Lu*</strong>, Yi Wang
     conference_short: PCI
     conference: "Proceedings of the Combustion Institute <strong>40.1-4</strong> (2024): 105282."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S1540748924000920
+    bibtex: ./assets/files/bibtex/lu2024surrogate.txt
     category: scientific machine learning
 
   - title: A neural surrogate solver for radiation transfer
     authors: Aleksei Sorokin, <strong>Xiaoyi Lu*</strong>, Yi Wang
     conference_short: "NeurIPS WS"
     conference: "NeurIPS 2024 Workshop on Data-driven and Differentiable Simulations, Surrogates, and Solvers."
+    pdf: https://openreview.net/forum?id=SHidR8UMKo
+    bibtex: ./assets/files/bibtex/sorokin2024neural.txt
     category: scientific machine learning
 
   - title: "A numerical study of transport phenomena and radiation transfer in compartment and facade fires"
     authors: <strong>Xiaoyi Lu*</strong>, et al.
     conference_short: FSJ
     conference: "Fire Safety Journal (2025): 104556."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0379711225002206
+    bibtex: ./assets/files/bibtex/lu2025compartment.txt
     category: computational fluid dynamics and combustion
 
   - title: "CFD modeling of radiation emission/absorption and fuel evaporation in methanol pool fires"
     authors: Ning Ren, <strong>Xiaoyi Lu</strong>, Yi Wang
     conference_short: FSJ
     conference: "Fire Safety Journal (2025): 104557."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0379711225002218
+    bibtex: ./assets/files/bibtex/ren2025methanol.txt
     category: computational fluid dynamics and combustion
 
   - title: "Transition to detonation in inhomogeneous hydrogen-air mixtures: The importance of gradients in detonation cell size"
     authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
     conference_short: PCI
     conference: "Proceedings of the Combustion Institute 39.3 (2023): 2777-2785."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S154074892200308X
+    bibtex: ./assets/files/bibtex/lu2023transition.txt
     category: computational fluid dynamics and combustion
 
   - title: "Predictions of flame acceleration, transition to detonation, and detonation propagation using the Chemical-Diffusive Model"
     authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
     conference_short: "Combust. Flame"
     conference: "Combustion and Flame 235 (2022): 111705."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S001021802100448X
+    bibtex: ./assets/files/bibtex/lu2022predictions.txt
     category: computational fluid dynamics and combustion
 
   - title: "An efficient and accurate optimization method for the chemical-diffusive model"
     authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
     conference_short: "Combust. Flame"
     conference: "Combustion and Flame 232 (2021): 111517."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S0010218021002601
+    bibtex: ./assets/files/bibtex/lu2021optimization.txt
     category: computational fluid dynamics and combustion
 
   - title: "A chemical-diffusive model for simulating detonative combustion with constrained detonation cell sizes"
     authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
     conference_short: "Combust. Flame"
     conference: "Combustion and Flame 230 (2021): 111417."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S001021802100153X
+    bibtex: ./assets/files/bibtex/lu2021chemical.txt
     category: computational fluid dynamics and combustion
 
   - title: "On mass conservation and solvability of the discretized variable-density zero-Mach Navier-Stokes equations"
     authors: <strong>Xiaoyi Lu*</strong>, Carlos Pantano
     conference_short: JCP
     conference: "Journal of Computational Physics 404 (2020): 109132."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S002199911930837X
+    bibtex: ./assets/files/bibtex/lu2020mass.txt
     category: computational fluid dynamics and combustion
 
   - title: "Linear stability analysis of a premixed flame with transverse shear"
     authors: <strong>Xiaoyi Lu*</strong>, Carlos Pantano
     conference_short: JFM
     conference: "Journal of Fluid Mechanics 765 (2015): 150-166."
+    pdf: https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/abs/linear-stability-analysis-of-a-premixed-flame-with-transverse-shear/117E30FF6A3D485F7DB427273BD74F11
+    bibtex: ./assets/files/bibtex/lu2015stability.txt
     category: computational fluid dynamics and combustion

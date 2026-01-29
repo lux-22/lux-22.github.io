@@ -1,0 +1,9 @@
+@article{lu2023transition,
+  title={Transition to detonation in inhomogeneous hydrogen-air mixtures: The importance of gradients in detonation cell size},
+  author={Xiaoyi Lu and Carolyn R. Kaplan and Elaine S. Oran},
+  journal={Proceedings of the Combustion Institute},
+  volume={39},
+  number={3},
+  pages={2777-2785},
+  year={2023}
+}

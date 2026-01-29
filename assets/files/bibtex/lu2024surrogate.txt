@@ -1,0 +1,9 @@
+@article{lu2024surrogate,
+  title={Surrogate modeling for radiative heat transfer using physics-informed deep neural operator networks},
+  author={Xiaoyi Lu and Yi Wang},
+  journal={Proceedings of the Combustion Institute},
+  volume={40},
+  number={1-4},
+  pages={105282},
+  year={2024}
+}

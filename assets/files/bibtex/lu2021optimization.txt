@@ -1,0 +1,8 @@
+@article{lu2021optimization,
+  title={An efficient and accurate optimization method for the chemical-diffusive model},
+  author={Xiaoyi Lu and Carolyn R. Kaplan and Elaine S. Oran},
+  journal={Combustion and Flame},
+  volume={232},
+  pages={111517},
+  year={2021}
+}

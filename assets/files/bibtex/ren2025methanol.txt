@@ -1,0 +1,7 @@
+@article{ren2025methanol,
+  title={CFD modeling of radiation emission/absorption and fuel evaporation in methanol pool fires},
+  author={Ning Ren and Xiaoyi Lu and Yi Wang},
+  journal={Fire Safety Journal},
+  pages={104557},
+  year={2025}
+}

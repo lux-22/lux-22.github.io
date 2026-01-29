@@ -1,0 +1,8 @@
+@article{lu2022predictions,
+  title={Predictions of flame acceleration, transition to detonation, and detonation propagation using the Chemical-Diffusive Model},
+  author={Xiaoyi Lu and Carolyn R. Kaplan and Elaine S. Oran},
+  journal={Combustion and Flame},
+  volume={235},
+  pages={111705},
+  year={2022}
+}

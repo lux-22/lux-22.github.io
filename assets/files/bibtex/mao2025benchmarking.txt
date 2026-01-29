@@ -1,0 +1,7 @@
+@misc{mao2025benchmarking,
+  title={Benchmarking neural surrogates on realistic spatiotemporal multiphysics flows},
+  author={Runze Mao and Xiaoyi Lu and others},
+  year={2025},
+  eprint={2512.18595},
+  archivePrefix={arXiv}
+}

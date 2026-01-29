@@ -1,0 +1,7 @@
+@article{lu2025compartment,
+  title={A numerical study of transport phenomena and radiation transfer in compartment and facade fires},
+  author={Xiaoyi Lu and others},
+  journal={Fire Safety Journal},
+  pages={104556},
+  year={2025}
+}

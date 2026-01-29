@@ -1,0 +1,6 @@
+@inproceedings{sorokin2024neural,
+  title={A neural surrogate solver for radiation transfer},
+  author={Aleksei Sorokin and Xiaoyi Lu and Yi Wang},
+  booktitle={NeurIPS 2024 Workshop on Data-driven and Differentiable Simulations, Surrogates, and Solvers},
+  year={2024}
+}

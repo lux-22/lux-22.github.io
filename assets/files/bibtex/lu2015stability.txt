@@ -1,0 +1,8 @@
+@article{lu2015stability,
+  title={Linear stability analysis of a premixed flame with transverse shear},
+  author={Xiaoyi Lu and Carlos Pantano},
+  journal={Journal of Fluid Mechanics},
+  volume={765},
+  pages={150-166},
+  year={2015}
+}
