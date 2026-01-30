@@ -61,7 +61,8 @@ Coming soon.
 
 ### Fire modeling
 
-Led internally funded research projects including modeling of facade fires, radiation transfer, developing a GPU-accelerated FireFOAM solver, and incorporating adaptive mesh refinement and load-balancing techniques into FireFOAM (see <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379711225002206" target="_blank" rel="noopener">FSJ 2025</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379711225002218" target="_blank" rel="noopener">FSJ 2025</a>).
+Led internally funded research projects including modeling of facade fires, radiation transfer. 
+Developed a GPU-accelerated FireFOAM solver, and incorprated adaptive mesh refinement and load-balancing techniques into FireFOAM, an open-source CFD solver for fire dynamics simulations written in C++ (see <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379711225002206" target="_blank" rel="noopener">FSJ 2025</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379711225002218" target="_blank" rel="noopener">FSJ 2025</a>).
 
 <div class="project-figure-row">
   <div class="project-figure project-figure-narrow">
