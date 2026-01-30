@@ -1,5 +1,6 @@
 ---
 layout: homepage
+published: false
 ---
 
 <div class="page-tabs">
