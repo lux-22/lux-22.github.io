@@ -16,6 +16,6 @@ I am a computational scientist specializing in computer simulation, applied math
 
 - **[Jan. 2026]** Our paper about machine learning accelerated radiation transfer for CFD is accepted to IAFSS 2026.
 
-## Selected Works
+## Recent Works
 
 {% include_relative _includes/publications.md show_heading=false category="scientific machine learning" section_title="" %}
