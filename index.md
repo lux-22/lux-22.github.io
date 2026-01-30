@@ -10,7 +10,7 @@ layout: homepage
 
 ## About Me
 
-I am a computational scientist specializing in computer simulation, applied mathematics, and scientific software development
+I am a computational scientist specializing in computer simulation, applied mathematics, and scientific software development. I earned MS & PhD in Theoretical and Applied Mechanics from the University of Illinois at Urbana-Champaign and BS in Mechanical Engieering from the University of Texas at Austin.
 
 ## News
 

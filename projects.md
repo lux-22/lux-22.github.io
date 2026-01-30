@@ -34,7 +34,6 @@ layout: homepage
   }
   .project-figure {
     height: 180px;
-    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
   }
@@ -47,6 +46,7 @@ layout: homepage
   .project-figure-cover img { object-fit: cover; }
   .project-figure-narrow { width: 25%; }
   .project-figure-wide { width: 40%; }
+  .project-figure-full { width: 100%; }
   /* .project-figure-medium { width: 35%; } */
   @media (max-width: 820px) {
     .project-image-row { grid-template-columns: 1fr; }
@@ -55,15 +55,27 @@ layout: homepage
   }
 </style>
 
-### scientific Machine Learning
+### AI for science
 
 Coming soon.
 
 ### Fire modeling
 
-Coming soon.
+Led internally funded research projects including modeling of facade fires, radiation transfer, developing a GPU-accelerated FireFOAM solver, and incorporating adaptive mesh refinement and load-balancing techniques into FireFOAM (see <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379711225002206" target="_blank" rel="noopener">FSJ 2025</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379711225002218" target="_blank" rel="noopener">FSJ 2025</a>).
 
-### Numerical simulations of deflagration to detonation transition
+<div class="project-figure-row">
+  <div class="project-figure project-figure-narrow">
+    <img src="{{ '/assets/img/amr1.png' | relative_url }}" alt="Adaptive mesh refinement result 1" />
+  </div>
+  <div class="project-figure project-figure-narrow">
+    <img src="{{ '/assets/img/amr2.png' | relative_url }}" alt="Adaptive mesh refinement result 2" />
+  </div>
+  <div class="project-figure project-figure-wide">
+    <img src="{{ '/assets/img/facade-side-by-side-153.png' | relative_url }}" alt="Facade fire modeling side-by-side results" />
+  </div>
+</div>
+
+### Deflagration to detonation transition
 
 Developed a GPU-accelerated compressible reactive flow solver for fundamental studies of detonation wave-solid structure interactions.
 Performed high-fidelity simulations of deflagration-to-detonation transition to quantify onset conditions and wave dynamics in reactive mixtures. (see <a href="https://www.sciencedirect.com/science/article/abs/pii/S001021802100153X" target="_blank" rel="noopener">CNF 2021</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010218021002601" target="_blank" rel="noopener">CNF 2021</a>, <a href="https://www.sciencedirect.com/science/article/abs/pii/S001021802100448X" target="_blank" rel="noopener">CNF 2022</a>, and <a href="https://www.sciencedirect.com/science/article/abs/pii/S154074892200308X" target="_blank" rel="noopener">PCI 2023</a>).
