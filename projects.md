@@ -1,6 +1,5 @@
 ---
 layout: homepage
-published: false
 ---
 
 <div class="page-tabs">
@@ -56,6 +55,23 @@ published: false
   }
 </style>
 
+Coming soon.
+
+<!--
+### Weather Prediction Markets
+
+Developed machine learning models for weather forecasting. Built a multi-source dataset 
+joining NOAA observations and weather forecasts to predict daily maximum temperature. 
+Implemented statistical analyses and ML pipelines with out-of-sample validation and 
+automated trading integration.
+
+### Market Making for Prediction Markets
+
+Building an algorithmic trading system for prediction markets: stochastic optimization for
+quoting strategies, async market data feeds, and event-driven backtesting infrastructure.
+-->
+
+<!--
 ### AI for science
 
 Coming soon.
@@ -103,3 +119,4 @@ Analyzed mass conservation property and solvability of the discretized zero-Mach
   <img class="image-wide" src="{{ '/assets/img/DNS.png' | relative_url }}" alt="DNS" />
   <img src="{{ '/assets/img/hydrodynamics.png' | relative_url }}" alt="Hydrodynamics" />
 </div>
+-->

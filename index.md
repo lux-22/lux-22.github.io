@@ -5,6 +5,7 @@ layout: homepage
 <div class="page-tabs">
   <a class="tab active" href="{{ '/' | relative_url }}">Home</a>
   <a class="tab" href="{{ '/publications.html' | relative_url }}">Publications</a>
+  <a class="tab" href="{{ '/projects.html' | relative_url }}">Projects</a>
 </div>
 
 ## About Me
