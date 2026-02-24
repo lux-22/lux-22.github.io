@@ -9,7 +9,9 @@ layout: homepage
 
 ## About Me
 
-I am a computational scientist specializing in computer simulation, applied mathematics, and scientific software development. I earned MS & PhD in Theoretical and Applied Mechanics from the University of Illinois at Urbana-Champaign and BS in Mechanical Engineering from the University of Texas at Austin.
+I build high-performance computational systems for modeling complex physical phenomena. My work bridges numerical analysis, scientific computing, and machine learning, spanning from CFD solvers in C++ to neural operator networks for surrogate modeling. Current interests include asynchronous computing, probabilistic modeling, and algorithmic decision-making under uncertainty.
+
+PhD in Theoretical and Applied Mechanics (UIUC), BS in Mechanical Engineering (UT Austin). 
 
 ## News
 
