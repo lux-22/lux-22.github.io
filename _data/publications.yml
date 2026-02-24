@@ -8,22 +8,6 @@ main:
     bibtex: ./assets/files/bibtex/mao2025benchmarking.txt
     category: scientific machine learning
 
-  - title: Surrogate modeling for radiative heat transfer using physics-informed deep neural operator networks
-    authors: <strong>Xiaoyi Lu*</strong>, Yi Wang
-    conference_short: PCI
-    conference: "Proceedings of the Combustion Institute <strong>40.1-4</strong> (2024): 105282."
-    pdf: https://www.sciencedirect.com/science/article/abs/pii/S1540748924000920
-    bibtex: ./assets/files/bibtex/lu2024surrogate.txt
-    category: scientific machine learning
-
-  - title: A neural surrogate solver for radiation transfer
-    authors: Aleksei Sorokin, <strong>Xiaoyi Lu*</strong>, Yi Wang
-    conference_short: "NeurIPS WS"
-    conference: "NeurIPS 2024 Workshop on Data-driven and Differentiable Simulations, Surrogates, and Solvers."
-    pdf: https://openreview.net/forum?id=SHidR8UMKo
-    bibtex: ./assets/files/bibtex/sorokin2024neural.txt
-    category: scientific machine learning
-
   - title: "A numerical study of transport phenomena and radiation transfer in compartment and facade fires"
     authors: <strong>Xiaoyi Lu*</strong>, et al.
     conference_short: FSJ
@@ -39,6 +23,22 @@ main:
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0379711225002218
     bibtex: ./assets/files/bibtex/ren2025methanol.txt
     category: computational fluid dynamics and combustion
+
+  - title: Surrogate modeling for radiative heat transfer using physics-informed deep neural operator networks
+    authors: <strong>Xiaoyi Lu*</strong>, Yi Wang
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute <strong>40.1-4</strong> (2024): 105282."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S1540748924000920
+    bibtex: ./assets/files/bibtex/lu2024surrogate.txt
+    category: scientific machine learning
+
+  - title: A neural surrogate solver for radiation transfer
+    authors: Aleksei Sorokin, <strong>Xiaoyi Lu*</strong>, Yi Wang
+    conference_short: "NeurIPS WS"
+    conference: "NeurIPS 2024 Workshop on Data-driven and Differentiable Simulations, Surrogates, and Solvers."
+    pdf: https://openreview.net/forum?id=SHidR8UMKo
+    bibtex: ./assets/files/bibtex/sorokin2024neural.txt
+    category: scientific machine learning
 
   - title: "Transition to detonation in inhomogeneous hydrogen-air mixtures: The importance of gradients in detonation cell size"
     authors: <strong>Xiaoyi Lu*</strong>, Carolyn R. Kaplan, Elaine S. Oran
