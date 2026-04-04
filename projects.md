@@ -10,8 +10,6 @@ layout: homepage
 
 ## Projects
 
-Built a small prediction-markets research and trading stack, spanning data engineering, probabilistic modeling, market microstructure, and automated execution for Kalshi daily temperature contracts.
-
 <style>
   .project-image-row {
     display: grid;
@@ -64,6 +62,12 @@ Built a research pipeline for weather prediction markets, combining NOAA observa
 This project is the data engieering and research layer of a broader prediction-markets trading stack, with downstream work focused on market microstructure and execution.
 
 Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
+
+### Automated Execution System for Prediction Markets
+
+Execution-focused trading system for submitting batched one-shot orders in Kalshi daily temperature markets. Developed as an operational layer for model- or strategy-driven trades, with server deployment, cron-based scheduling, and configurable order generation for automated runs.
+
+Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
 
 <!--
 ### Weather Prediction Markets
