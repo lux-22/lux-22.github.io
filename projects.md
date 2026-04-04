@@ -10,8 +10,6 @@ layout: homepage
 
 <h2>Projects</h2>
 
-<small style="font-weight: normal;">These are personal projects pursued independently outside of work.</small>
-
 <style>
   .project-image-row {
     display: grid;
@@ -58,6 +56,8 @@ layout: homepage
 </style>
 
 Built a prediction-markets research and trading stack spanning data engineering, machine learning, market microstructure, and automated execution.
+
+<small>The listed projects are pursued independently outside of work.</small>
 
 ### Research Pipeline for Weather Prediction Markets
 
