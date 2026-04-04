@@ -14,10 +14,10 @@ I build high-performance computational systems for modeling complex physical phe
 
 PhD in Theoretical and Applied Mechanics (UIUC), BS in Mechanical Engineering (UT Austin). 
 
-## News
+<!-- ## News
 
 - **[Jan. 2026]** Our paper about machine learning accelerated radiation transfer for CFD is accepted to IAFSS 2026.
 
 ## Recent Works
 
-{% include_relative _includes/publications.md show_heading=false category="scientific machine learning" section_title="" %}
+{% include_relative _includes/publications.md show_heading=false category="scientific machine learning" section_title="" %} -->

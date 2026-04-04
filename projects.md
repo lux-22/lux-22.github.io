@@ -61,7 +61,7 @@ Built a prediction-markets research and trading stack spanning data engineering,
 
 ### Research Pipeline for Weather Prediction Markets
 
-Built a research pipeline for weather prediction markets, combining NOAA observations and forecasts with market data to train and evaluate ML models for daily temperature contracts. Focused on data ingestion, feature engineering, probabilistic modeling, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
+A research pipeline for weather prediction markets, combining NOAA observations and forecasts with market data to train and evaluate ML models for daily temperature contracts. Focused on data ingestion, feature engineering, probabilistic modeling, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
 
 <!-- This project is the data engineering and research layer of a broader prediction-markets trading stack, with downstream work focused on market microstructure and execution. -->
 
@@ -69,7 +69,7 @@ Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blan
 
 ### Market Microstructure and Market-Making Research (under development)
 
-Research project focused on live order book ingestion, inventory-aware quoting, and automated execution in prediction markets. Implements negative-risk logic and an Avellaneda-Stoikov-style market-making framework to study market microstructure and event-driven trading systems.
+Research project focused on live order book ingestion, inventory-aware quoting, and automated execution in prediction markets. Implemented negative-risk logic and an Avellaneda-Stoikov-style market-making framework to study market microstructure and event-driven trading systems.
 
 Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
 
