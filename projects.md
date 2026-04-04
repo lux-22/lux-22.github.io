@@ -10,6 +10,8 @@ layout: homepage
 
 ## Projects
 
+Built a small prediction-markets research and trading stack, spanning data engineering, probabilistic modeling, market microstructure, and automated execution for Kalshi daily temperature contracts.
+
 <style>
   .project-image-row {
     display: grid;
@@ -55,9 +57,11 @@ layout: homepage
   }
 </style>
 
-### Weather Prediction Market Analysis
+### Research Pipeline for Weather Prediction Markets
 
-Built a research pipeline around weather prediction markets by combining NOAA observations and forecasts with Kalshi market data, then training ML models to evaluate daily maximum-temperature contracts across multiple U.S. cities.
+Built a research pipeline for weather prediction markets, combining NOAA observations and forecasts with Kalshi market data to model daily temperature contracts. Focused on feature design, probabilistic ranking, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
+
+This project is the data engieering and research layer of a broader prediction-markets trading stack, with downstream work focused on market microstructure and execution.
 
 Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
 
