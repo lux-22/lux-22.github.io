@@ -55,17 +55,25 @@ layout: homepage
   }
 </style>
 
+Built a prediction-markets research and trading stack spanning data engineering, machine learning, market microstructure, and automated execution.
+
 ### Research Pipeline for Weather Prediction Markets
 
-Built a research pipeline for weather prediction markets, combining NOAA observations and forecasts with Kalshi market data to model daily temperature contracts. Focused on feature design, probabilistic ranking, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
+Built a research pipeline for weather prediction markets, combining NOAA observations and forecasts with market data to train and evaluate ML models for daily temperature contracts. Focused on data ingestion, feature engineering, probabilistic modeling, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
 
-This project is the data engieering and research layer of a broader prediction-markets trading stack, with downstream work focused on market microstructure and execution.
+This project is the data engineering and research layer of a broader prediction-markets trading stack, with downstream work focused on market microstructure and execution.
 
 Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
 
+### Market Microstructure and Market-Making Research (under development)
+
+Research project focused on live order book ingestion, inventory-aware quoting, and automated execution in prediction markets. Implements negative-risk logic and an Avellaneda-Stoikov-style market-making framework to study market microstructure and event-driven trading systems.
+
+Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
+
 ### Automated Execution System for Prediction Markets
 
-Execution-focused trading system for submitting batched one-shot orders in Kalshi daily temperature markets. Developed as an operational layer for model- or strategy-driven trades, with server deployment, cron-based scheduling, and configurable order generation for automated runs.
+Execution-focused trading system for submitting batched one-shot orders in prediction markets. Developed as an operational layer for model- or strategy-driven trades, with server deployment, cron-based scheduling, and configurable order generation for automated runs.
 
 Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
 
