@@ -8,7 +8,9 @@ layout: homepage
   <a class="tab active" href="{{ '/projects.html' | relative_url }}">Projects</a>
 </div>
 
-<h2>Projects <small style="font-weight: normal;">These are personal projects pursued independently outside of work.</small></h2>
+<h2>Projects</h2>
+
+<small style="font-weight: normal;">These are personal projects pursued independently outside of work.</small>
 
 <style>
   .project-image-row {
