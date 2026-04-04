@@ -57,6 +57,8 @@ layout: homepage
 
 Built a prediction-markets research and trading stack spanning data engineering, machine learning, market microstructure, and automated execution.
 
+<small>These are personal projects pursued independently outside of work.</small>
+
 ### Research Pipeline for Weather Prediction Markets
 
 Built a research pipeline for weather prediction markets, combining NOAA observations and forecasts with market data to train and evaluate ML models for daily temperature contracts. Focused on data ingestion, feature engineering, probabilistic modeling, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
