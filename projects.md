@@ -55,7 +55,11 @@ layout: homepage
   }
 </style>
 
-Coming soon.
+### Weather Prediction Market Analysis
+
+Built a research pipeline around weather prediction markets by combining NOAA observations and forecasts with Kalshi market data, then training ML models to evaluate daily maximum-temperature contracts across multiple U.S. cities.
+
+Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
 
 <!--
 ### Weather Prediction Markets
