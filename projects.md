@@ -55,29 +55,15 @@ layout: homepage
   }
 </style>
 
-Built a prediction-markets research and trading stack spanning data engineering, machine learning, market microstructure, and automated execution.
+<small>All projects listed here were pursued independently on personal time, using publicly available data and personal infrastructure, and are unaffiliated with my employer.</small>
 
-<small>The listed projects are pursued independently outside of work.</small>
+### Prediction Markets Research Platform
 
-### Research Pipeline for Weather Prediction Markets
+Developed an independent research platform for prediction markets, focused on weather contracts and the interaction between forecasting, market pricing, and execution. The project combined multi-source data pipelines, probabilistic modeling, and out-of-sample evaluation with market microstructure research and automated trading infrastructure. The resulting platform supported both empirical study and live strategy implementation.
 
-A research pipeline for weather prediction markets, combining NOAA observations and forecasts with market data to train and evaluate ML models for daily temperature contracts. Focused on data ingestion, feature engineering, probabilistic modeling, and out-of-sample evaluation against market-implied baselines across multiple U.S. cities.
-
-<!-- This project is the data engineering and research layer of a broader prediction-markets trading stack, with downstream work focused on market microstructure and execution. -->
-
-Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
-
-### Market Microstructure and Market-Making Research (under development)
-
-Research project focused on live order book ingestion, inventory-aware quoting, and automated execution in prediction markets. Implemented negative-risk logic and an Avellaneda-Stoikov-style market-making framework to study market microstructure and event-driven trading systems.
-
-Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
-
-### Automated Execution System for Prediction Markets
-
-Execution-focused trading system for submitting batched one-shot orders in prediction markets. Developed as an operational layer for model- or strategy-driven trades, with server deployment, cron-based scheduling, and configurable order generation for automated runs.
-
-Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
+- <strong>Data engineering and research layer:</strong> Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
+- <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
+- <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
 
 <!--
 ### Weather Prediction Markets
