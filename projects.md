@@ -8,7 +8,7 @@ layout: homepage
   <a class="tab active" href="{{ '/projects.html' | relative_url }}">Projects</a>
 </div>
 
-<h2>Projects</h2>
+## Projects
 
 <style>
   .project-image-row {
@@ -55,40 +55,13 @@ layout: homepage
   }
 </style>
 
-<small>All projects listed here were pursued independently on personal time, using publicly available data and personal infrastructure, and are unaffiliated with my employer.</small>
+- **Data engineering and research layer:** Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
+- **Market microstructure and strategy layer:** Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
+- **Execution layer:** Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
 
-### Prediction Markets Research Platform
-
-Developed an independent research platform for prediction markets, focused on weather contracts and the interaction between forecasting, market pricing, and execution. The project combined multi-source data pipelines, probabilistic modeling, and out-of-sample evaluation with market microstructure research and automated trading infrastructure. The resulting platform supported both empirical study and live strategy implementation.
-
-- <strong>Data engineering and research layer:</strong> Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
-- <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
-### Weather Prediction & Trading System
-
-Quantitative ML pipeline for Kalshi temperature event contracts. Built a multi-source dataset joining NOAA observations and weather forecast models to predict daily maximum temperatures with probabilistic quantile forecasting.
-
-#### Data Flow & Modeling Pipeline
-
-<div class="project-figure-row">
-  <div class="project-figure project-figure-full" style="height: auto; border: 1px solid #1e293b; background: #020617;">
-    <iframe src="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" style="width: 100%; height: 600px; border: none;"></iframe>
-  </div>
-</div>
-
-<div style="margin-top: 10px;">
+<div style="margin-top: 20px;">
   <a href="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" target="_blank">View full-screen architecture diagram &rarr;</a>
 </div>
-
-#### Data engineering and research layer
-* **Multi-source intake**: Continuous ingestion of NOAA NBM/NCEI and prediction market data.
-* **Point-in-Time (PIT) integrity**: Robust temporal alignment to prevent data leakage in features.
-* **Probabilistic Quantile Forecasting**: Modeling the full temperature distribution (p10/p50/p90).
-* **Walk-forward Backtesting**: Realistic evaluation of out-of-sample PnL and strategy performance.
-
-#### Production trading and execution
-* **Automated Order Submission**: Integrated execution logic with slippage and risk controls.
-* **Portfolio Mark-to-Market (MtM)**: Real-time accounting, journaling, and performance tracking.
-* **System Telemetry**: Monitoring of server health and pipeline liveness.
 
 <!--
 ### AI for science
