@@ -53,17 +53,15 @@ layout: homepage
     .project-figure { width: 100%; height: auto; }
     /* .project-figure img { height: auto; } */
   }
-  .ascii-art {
-    background: #0f172a;
-    color: #94a3b8;
-    padding: 20px;
-    border-radius: 8px;
+  .ascii-diagram {
+    color: #64748b;
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    line-height: 1.2;
-    border: 1px solid #1e293b;
-    margin: 20px 0;
+    line-height: 1.25;
+    margin: 30px 0;
     overflow-x: auto;
+    white-space: pre;
+    user-select: none;
   }
 </style>
 
@@ -85,26 +83,20 @@ quoting strategies, async market data feeds, and event-driven backtesting infras
 
 ### Weather Prediction & Trading System 
 
-<div class="ascii-art">
-<pre>
-┌──────────────────────────────── PREFECT ORCHESTRATION ───────────────────────────────┐
-│                                                                                      │
-│  SOURCES           INGESTION          FEATURES           MODELING          LIVE      │
-│  ───────           ─────────          ────────           ────────          ────      │
-│                                                                                      │
-│  Weather  ──┐      ┌─────────┐      ┌───────────┐      ┌───────────┐      ┌────────┐ │
-│  Forecast ──┼─────→│ Unified │─────→│ Weather & │─────→│ Quantile  │─────→│ ML     │ │
-│             │      │   CSV   │      │ Market    │      │ Modeling  │      │ Infer. │ │
-│  Station  ──┼─────→│ Storage │─────→│ Features  │─────→│ (LGBM)    │─────→│ & Exec │ │
-│  Obs      ──┘      └─────────┘      └─────┬─────┘      └─────┬─────┘      └────────┘ │
-│                                           │                  │                       │
-│  Predict. ──┐      ┌─────────┐            │            ┌─────┴─────┐      ┌────────┐ │
-│  Markets  ──┴─────→│ Market  │────────────┘            │ Walk-fwd  │      │ PnL &  │ │
-│                    │ Ingest  │                         │ Backtest  │      │ Trades │ │
-│                    └─────────┘                         └───────────┘      └────────┘ │
-│                                                                                      │
-└──────────────────────────────────────────────────────────────────────────────────────┘
-</pre>
+<div class="ascii-diagram">
+ SOURCES           INGESTION          FEATURES           MODELING          LIVE
+ ───────           ─────────          ────────           ────────          ────
+
+ Weather  ──┐      ┌─────────┐      ┌───────────┐      ┌───────────┐      ┌────────┐
+ Forecast ──┼─────→│ Unified │─────→│ Weather & │─────→│ Quantile  │─────→│ ML     │
+            │      │   CSV   │      │ Market    │      │ Modeling  │      │ Infer. │
+ Station  ──┼─────→│ Storage │─────→│ Features  │─────→│ (LGBM)    │─────→│ & Exec │
+ Obs      ──┘      └─────────┘      └─────┬─────┘      └─────┬─────┘      └────────┘
+                                          │                  │
+ Predict. ──┐      ┌─────────┐            │            ┌─────┴─────┐      ┌────────┐
+ Markets  ──┴─────→│ Market  │────────────┘            │ Walk-fwd  │      │ PnL &  │
+                   │ Ingest  │                         │ Backtest  │      │ Trades │
+                   └─────────┘                         └───────────┘      └────────┘
 </div>
 
 - **Data engineering and research layer:** Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
