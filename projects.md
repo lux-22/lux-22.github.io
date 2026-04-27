@@ -65,23 +65,14 @@ layout: homepage
   }
 </style>
 
-Coming soon.
+<small>All projects listed here were pursued independently on personal time, using publicly available data and personal infrastructure, and are unaffiliated with my employer.</small>
 
-<!--
-### Weather Prediction Markets
+### Prediction Markets Research Platform
 
-Developed machine learning models for weather forecasting. Built a multi-source dataset 
-joining NOAA observations and weather forecasts to predict daily maximum temperature. 
-Implemented statistical analyses and ML pipelines with out-of-sample validation and 
-automated trading integration.
+Developed an independent research platform for prediction markets, focused on weather contracts and the interaction between forecasting, market pricing, and execution. The project combined multi-source data pipelines, probabilistic modeling, and out-of-sample evaluation with market microstructure research and automated trading infrastructure. The resulting platform supported both empirical study and live strategy implementation.
 
-### Market Making for Prediction Markets
+- <strong>Data engineering and research layer:</strong> Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
 
-Building an algorithmic trading system for prediction markets: stochastic optimization for
-quoting strategies, async market data feeds, and event-driven backtesting infrastructure.
--->
-
-### Weather Prediction & Trading System 
 
 <div class="ascii-diagram">
  SOURCES           INGESTION          FEATURES           MODELING          LIVE
@@ -98,10 +89,8 @@ quoting strategies, async market data feeds, and event-driven backtesting infras
                    │ Ingest  │                         │ Backtest  │      │ Trades │
                    └─────────┘                         └───────────┘      └────────┘
 </div>
-
-- **Data engineering and research layer:** Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
-- **Market microstructure and strategy layer:** Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
-- **Execution layer:** Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
+- <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
+- <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
 
 <div style="margin-top: 10px;">
   <a href="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" target="_blank">View high-fidelity interactive architecture diagram &rarr;</a>
