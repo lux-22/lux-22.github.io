@@ -63,9 +63,11 @@ Developed an independent research platform for prediction markets, focused on we
 
 - <strong>Data engineering and research layer:</strong> Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
 - <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
-- <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
+### Weather Prediction & Trading System
 
 Quantitative ML pipeline for Kalshi temperature event contracts. Built a multi-source dataset joining NOAA observations and weather forecast models to predict daily maximum temperatures with probabilistic quantile forecasting.
+
+#### Data Flow & Modeling Pipeline
 
 <div class="project-figure-row">
   <div class="project-figure project-figure-full" style="height: auto; border: 1px solid #1e293b; background: #020617;">
@@ -77,9 +79,16 @@ Quantitative ML pipeline for Kalshi temperature event contracts. Built a multi-s
   <a href="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" target="_blank">View full-screen architecture diagram &rarr;</a>
 </div>
 
-### Market Making for Prediction Markets
+#### Data engineering and research layer
+* **Multi-source intake**: Continuous ingestion of NOAA NBM/NCEI and prediction market data.
+* **Point-in-Time (PIT) integrity**: Robust temporal alignment to prevent data leakage in features.
+* **Probabilistic Quantile Forecasting**: Modeling the full temperature distribution (p10/p50/p90).
+* **Walk-forward Backtesting**: Realistic evaluation of out-of-sample PnL and strategy performance.
 
-Building an algorithmic trading system for prediction markets: stochastic optimization for quoting strategies, async market data feeds, and event-driven backtesting infrastructure.
+#### Production trading and execution
+* **Automated Order Submission**: Integrated execution logic with slippage and risk controls.
+* **Portfolio Mark-to-Market (MtM)**: Real-time accounting, journaling, and performance tracking.
+* **System Telemetry**: Monitoring of server health and pipeline liveness.
 
 <!--
 ### AI for science
