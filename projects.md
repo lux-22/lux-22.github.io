@@ -70,25 +70,25 @@ layout: homepage
 
 ### Prediction Markets Research Platform
 
-Developed an independent research platform for prediction markets, focused on weather contracts and the interaction between forecasting, market pricing, and execution. The project combined multi-source data pipelines, probabilistic modeling, and out-of-sample evaluation with market microstructure research and automated trading infrastructure. The resulting platform supported both empirical study and live strategy implementation.
+Developed an end-to-end systematic research platform for probabilistic forecasting and automated trading, validated on event contracts as a sandbox for signal infrastructure and strategy development.
 
 <div class="ascii-diagram">
- SOURCES           INGESTION          FEATURES           MODELING          LIVE
- ───────           ─────────          ────────           ────────          ────
+ SOURCES           INGESTION          FEATURES           MODELING          PRODUCTION
+ ───────           ─────────          ────────           ────────          ──────────
 
- Weather  ──┐      ┌─────────┐      ┌───────────┐      ┌───────────┐      ┌────────┐
- Forecast ──┼─────→│ Unified │─────→│ Weather & │─────→│ Quantile  │─────→│ ML     │
-            │      │  Data   │      │ Market    │      │ Modeling  │      │ Infer. │
- Station  ──┼─────→│ Storage │─────→│ Features  │─────→│ (LGBM)    │─────→│ & Exec │
- Obs      ──┘      └─────────┘      └─────┬─────┘      └─────┬─────┘      └────────┘
+ Alt-Data ──┐      ┌─────────┐      ┌───────────┐      ┌───────────┐      ┌──────────┐
+ Feeds    ──┼─────→│ Unified │─────→│ Feature   │─────→│ Signal    │─────→│ Signal   │
+            │      │  Data   │      │ Store     │      │ Models    │      │ Gen &    │
+ Ground   ──┼─────→│ Storage │─────→│           │─────→│ (LGBM)    │─────→│ Exec     │
+ Truth    ──┘      └─────────┘      └─────┬─────┘      └─────┬─────┘      └──────────┘
                                           │                  │
- Predict. ──┐      ┌─────────┐            │            ┌─────┴─────┐      ┌────────┐
- Markets  ──┴─────→│ Market  │────────────┘            │ Walk-fwd  │      │ PnL &  │
-                   │ Ingest  │                         │ Backtest  │      │ Trades │
-                   └─────────┘                         └───────────┘      └────────┘
+ Market   ──┐      ┌─────────┐            │            ┌─────┴─────┐      ┌──────────┐
+ Data     ──┴─────→│ Market  │────────────┘            │ Walk-fwd  │      │ Perf. &  │
+                   │ Ingest  │                         │ Backtest  │      │ Risk     │
+                   └─────────┘                         └───────────┘      └──────────┘
 </div>
 
-- <strong>Data engineering and research layer:</strong> Integrates NOAA observations, forecasts, and market data for feature construction, probabilistic modeling, and out-of-sample evaluation of weather prediction contracts. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
+- <strong>Data &amp; research layer:</strong> Multi-source alt-data ingestion, feature engineering, and probabilistic signal modeling with walk-forward validation. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
 
 - <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
 - <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
