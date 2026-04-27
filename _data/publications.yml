@@ -1,13 +1,13 @@
 main:
   - title: Machine learning accelerated radiative transfer modeling in CFD fire simulations
-    authors: <strong>Xiaoyi Lu*</strong>, Magnus Daneker, Linlan Lu, Yi Wang
+    authors: <strong>Xiaoyi Lu*</strong>, Mitchell Daneker, Lu Lu, Yi Wang
     conference_short: FSJ
     conference: "Fire Safety Journal (2026): 104819."
     pdf: https://www.sciencedirect.com/science/article/abs/pii/S0379711225004734
     category: scientific machine learning
 
   - title: Nested Fourier-enhanced neural operator for efficient modeling of radiation transfer in fires
-    authors: Anqi Jiao, Wenkun Jiang, <strong>Xiaoyi Lu</strong>, Yi Wang, Linlan Lu
+    authors: Anran Jiao, Wenyao Jiang, <strong>Xiaoyi Lu*</strong>, Yi Wang, Lu Lu*
     conference_short: arXiv
     conference: "arXiv preprint arXiv:2604.13919 (2026)."
     pdf: https://arxiv.org/abs/2604.13919
