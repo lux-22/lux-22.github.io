@@ -65,19 +65,21 @@ Developed an independent research platform for prediction markets, focused on we
 - <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
 - <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
 
-<!--
-### Weather Prediction Markets
+Quantitative ML pipeline for Kalshi temperature event contracts. Built a multi-source dataset joining NOAA observations and weather forecast models to predict daily maximum temperatures with probabilistic quantile forecasting.
 
-Developed machine learning models for weather forecasting. Built a multi-source dataset 
-joining NOAA observations and weather forecasts to predict daily maximum temperature. 
-Implemented statistical analyses and ML pipelines with out-of-sample validation and 
-automated trading integration.
+<div class="project-figure-row">
+  <div class="project-figure project-figure-full" style="height: auto; border: 1px solid #1e293b; background: #020617;">
+    <iframe src="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" style="width: 100%; height: 600px; border: none;"></iframe>
+  </div>
+</div>
+
+<div style="margin-top: 10px;">
+  <a href="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" target="_blank">View full-screen architecture diagram &rarr;</a>
+</div>
 
 ### Market Making for Prediction Markets
 
-Building an algorithmic trading system for prediction markets: stochastic optimization for
-quoting strategies, async market data feeds, and event-driven backtesting infrastructure.
--->
+Building an algorithmic trading system for prediction markets: stochastic optimization for quoting strategies, async market data feeds, and event-driven backtesting infrastructure.
 
 <!--
 ### AI for science

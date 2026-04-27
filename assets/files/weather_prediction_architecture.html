@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Prediction Markets — System Architecture</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #020617; color: #e2e8f0;
+      font-family: 'JetBrains Mono', monospace;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 48px 24px;
+    }
+    .container { max-width: 1200px; width: 100%; }
+    .header { display: flex; align-items: center; gap: 16px; margin-bottom: 36px; }
+    .header-dot { width: 12px; height: 12px; border-radius: 50%; background: #22d3ee; animation: pulse 2s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .header h1 { font-size: 22px; font-weight: 700; color: #f8fafc; }
+    .header .subtitle { font-size: 11px; color: #64748b; margin-top: 4px; }
+
+    .panel {
+      background: #0f172a; border: 1px solid #1e293b;
+      border-radius: 14px; padding: 36px; margin-bottom: 24px;
+    }
+    .panel-label {
+      font-size: 11px; font-weight: 600; color: #475569;
+      letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 24px;
+    }
+    svg { width: 100%; height: auto; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .card {
+      background: #0f172a; border: 1px solid #1e293b;
+      border-radius: 10px; padding: 20px;
+    }
+    .card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .card-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .card-dot.cyan    { background: #22d3ee; }
+    .card-dot.emerald { background: #34d399; }
+    .card-dot.violet  { background: #a78bfa; }
+    .card-dot.amber   { background: #fbbf24; }
+    .card-dot.rose    { background: #fb7185; }
+    .card h3 { font-size: 13px; font-weight: 600; color: #f8fafc; }
+    .card ul { list-style: none; }
+    .card ul li { font-size: 10px; color: #94a3b8; line-height: 2.0; padding-left: 14px; position: relative; }
+    .card ul li::before { content: '•'; position: absolute; left: 0; color: #334155; }
+    .footer { text-align: center; font-size: 10px; color: #334155; margin-top: 8px; }
+    @media (max-width: 768px) { .cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="header-dot"></div>
+    <div>
+      <h1>Weather Prediction Markets — System Architecture</h1>
+      <div class="subtitle">Quantitative ML pipeline for Kalshi temperature event contracts &middot; Production deployment</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-label">Data Flow &amp; Modeling Pipeline</div>
+    <svg viewBox="0 0 1140 540" xmlns="http://www.w3.org/2000/svg" font-family="JetBrains Mono, monospace">
+      <defs>
+        <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+        </pattern>
+        <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 Z" fill="#64748b"/>
+        </marker>
+        <marker id="arr-am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 Z" fill="#fbbf24"/>
+        </marker>
+        <marker id="arr-em" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 Z" fill="#34d399"/>
+        </marker>
+        <marker id="arr-vi" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 Z" fill="#a78bfa"/>
+        </marker>
+        <marker id="arr-ro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 Z" fill="#fb7185"/>
+        </marker>
+      </defs>
+
+      <rect width="1140" height="540" fill="url(#grid2)"/>
+
+      <!-- Prefect workflow orchestration panel -->
+      <rect x="15" y="10" width="1110" height="475" rx="16" fill="none" stroke="#1e293b" stroke-width="2" stroke-dasharray="10,5"/>
+      
+      <!-- Columns and content within the SVG -->
+      <rect x="25"  y="20" width="180" height="440" rx="14" fill="none" stroke="#475569" stroke-width="1.5" stroke-dasharray="8,4"/>
+      <text x="115" y="47" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">EXTERNAL SOURCES</text>
+
+      <rect x="227" y="20" width="160" height="440" rx="14" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="8,4"/>
+      <text x="307" y="47" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600">INGESTION</text>
+
+      <rect x="409" y="20" width="180" height="440" rx="14" fill="none" stroke="#34d399" stroke-width="1.5" stroke-dasharray="8,4"/>
+      <text x="499" y="47" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">FEATURE ENGINEERING</text>
+
+      <rect x="611" y="20" width="200" height="440" rx="14" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="8,4"/>
+      <text x="711" y="47" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="600">MODELING &amp; BACKTESTING</text>
+
+      <rect x="833" y="20" width="277" height="440" rx="14" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="8,4"/>
+      <text x="971" y="47" text-anchor="middle" fill="#fb7185" font-size="9" font-weight="600">LIVE PREDICTION &amp; EXECUTION</text>
+
+      <!-- COLUMN 1 content -->
+      <g>
+        <rect x="40" y="70" width="150" height="80" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+        <text x="115" y="92" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="600">NOAA Observations</text>
+        <text x="115" y="110" text-anchor="middle" fill="#22d3ee" font-size="6.5">Historical: NCEI Archive</text>
+        <text x="115" y="124" text-anchor="middle" fill="#94a3b8" font-size="6.5">Live: NWS API</text>
+      </g>
+      <g>
+        <rect x="40" y="170" width="150" height="80" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+        <text x="115" y="192" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="600">Weather Forecast Models</text>
+        <text x="115" y="212" text-anchor="middle" fill="#22d3ee" font-size="6.5">Historical: AWS S3</text>
+        <text x="115" y="228" text-anchor="middle" fill="#94a3b8" font-size="6.5">Live: Operational endpoint</text>
+      </g>
+      <g>
+        <rect x="40" y="270" width="150" height="90" rx="6" fill="#0f172a" stroke="#64748b" stroke-width="1.5"/>
+        <text x="115" y="290" text-anchor="middle" fill="#e2e8f0" font-size="9" font-weight="600">Prediction Markets</text>
+        <text x="115" y="308" text-anchor="middle" fill="#22d3ee" font-size="6.5">Model: Candlestick</text>
+        <text x="115" y="324" text-anchor="middle" fill="#94a3b8" font-size="6.5">Trading: Orderbook</text>
+        <text x="115" y="342" text-anchor="middle" fill="#64748b" font-size="6.5">Binary event contracts</text>
+      </g>
+      <g>
+        <rect x="40" y="380" width="150" height="50" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+        <text x="115" y="403" text-anchor="middle" fill="#94a3b8" font-size="8" font-weight="600">Station Metadata</text>
+        <text x="115" y="419" text-anchor="middle" fill="#64748b" font-size="6.5">ICAO codes · Lat/Lon · TZ</text>
+      </g>
+
+      <!-- COLUMN 2 content -->
+      <g>
+        <rect x="240" y="70" width="134" height="38" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="307" y="93" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">Observations</text>
+      </g>
+      <g>
+        <rect x="240" y="123" width="134" height="38" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="307" y="146" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">Weather Forecasts</text>
+      </g>
+      <g>
+        <rect x="240" y="176" width="134" height="38" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="307" y="199" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">Market Data</text>
+      </g>
+      <g>
+        <rect x="240" y="229" width="134" height="38" rx="6" fill="#0f172a" stroke="#fbbf24" stroke-width="1.5"/>
+        <text x="307" y="252" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="600">Metadata</text>
+      </g>
+      <g transform="translate(238, 290)">
+        <rect x="0" y="0" width="138" height="95" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="69" y="17" text-anchor="middle" fill="#64748b" font-size="7" font-weight="600">INGESTION DETAIL</text>
+        <text x="10" y="35" fill="#fbbf24" font-size="7">•</text>
+        <text x="18" y="35" fill="#94a3b8" font-size="6">Multi-source (API/S3/Web)</text>
+        <text x="10" y="49" fill="#fbbf24" font-size="7">•</text>
+        <text x="18" y="49" fill="#94a3b8" font-size="6">Format: GRIB2/JSON/CSV</text>
+        <text x="10" y="63" fill="#fbbf24" font-size="7">•</text>
+        <text x="18" y="63" fill="#94a3b8" font-size="6">Asynchronous availability</text>
+        <text x="10" y="77" fill="#fbbf24" font-size="7">•</text>
+        <text x="18" y="77" fill="#94a3b8" font-size="6">Unified CSV storage</text>
+      </g>
+
+      <!-- COLUMN 3 content -->
+      <g>
+        <rect x="424" y="70" width="150" height="45" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+        <text x="499" y="96" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">Weather Features</text>
+      </g>
+      <g>
+        <rect x="424" y="135" width="150" height="45" rx="6" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+        <text x="499" y="161" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">Market Features</text>
+      </g>
+      <g transform="translate(424, 195)">
+        <rect x="0" y="0" width="150" height="95" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="75" y="17" text-anchor="middle" fill="#64748b" font-size="7" font-weight="600">FEATURE DETAIL</text>
+        <text x="10" y="35" fill="#34d399" font-size="7">•</text>
+        <text x="18" y="35" fill="#94a3b8" font-size="6">Cross TZ alignment</text>
+        <text x="10" y="49" fill="#34d399" font-size="7">•</text>
+        <text x="18" y="49" fill="#94a3b8" font-size="6">Zero lookahead PIT</text>
+        <text x="10" y="63" fill="#34d399" font-size="7">•</text>
+        <text x="18" y="63" fill="#94a3b8" font-size="6">Lagged obs/bias</text>
+        <text x="10" y="77" fill="#34d399" font-size="7">•</text>
+        <text x="18" y="77" fill="#94a3b8" font-size="6">Station Climatology</text>
+      </g>
+
+      <!-- COLUMN 4 content -->
+      <g>
+        <rect x="626" y="70" width="170" height="65" rx="6" fill="#0f172a" stroke="#a78bfa" stroke-width="1.5"/>
+        <text x="711" y="93" text-anchor="middle" fill="#a78bfa" font-size="9" font-weight="600">Probabilistic Modeling</text>
+        <text x="711" y="112" text-anchor="middle" fill="#94a3b8" font-size="7">LightGBM Quantile Regression</text>
+        <text x="711" y="126" text-anchor="middle" fill="#64748b" font-size="6.5">p10 / p50 / p90 · Expected profit</text>
+      </g>
+      <g transform="translate(626, 155)">
+        <rect x="0" y="0" width="170" height="130" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="85" y="17" text-anchor="middle" fill="#64748b" font-size="7" font-weight="600">VALIDATION &amp; EVALUATION</text>
+        <text x="10" y="35" fill="#a78bfa" font-size="7">•</text>
+        <text x="18" y="35" fill="#94a3b8" font-size="6">Walk-forward cross-validation</text>
+        <text x="10" y="51" fill="#a78bfa" font-size="7">•</text>
+        <text x="18" y="51" fill="#94a3b8" font-size="6">Out-of-sample PnL evaluation</text>
+        <text x="10" y="67" fill="#a78bfa" font-size="7">•</text>
+        <text x="18" y="67" fill="#94a3b8" font-size="6">SHAP feature importance</text>
+        <text x="10" y="83" fill="#a78bfa" font-size="7">•</text>
+        <text x="18" y="83" fill="#94a3b8" font-size="6">Grid search hyperparameter tuning</text>
+        <text x="10" y="99" fill="#a78bfa" font-size="7">•</text>
+        <text x="18" y="99" fill="#94a3b8" font-size="6">PIT snapshot cutoff enforcement</text>
+        <text x="10" y="115" fill="#a78bfa" font-size="7">•</text>
+        <text x="18" y="115" fill="#94a3b8" font-size="6">Time-series aware train/test split</text>
+      </g>
+
+      <!-- COLUMN 5 content -->
+      <g>
+        <rect x="848" y="70" width="247" height="40" rx="6" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="971" y="93" text-anchor="middle" fill="#fb7185" font-size="9" font-weight="600">ML Inference (Weather &amp; Market)</text>
+      </g>
+      <g>
+        <rect x="848" y="120" width="247" height="40" rx="6" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="971" y="143" text-anchor="middle" fill="#fb7185" font-size="9" font-weight="600">Order Execution</text>
+      </g>
+      <g>
+        <rect x="848" y="170" width="247" height="40" rx="6" fill="#0f172a" stroke="#fb7185" stroke-width="1.5"/>
+        <text x="971" y="193" text-anchor="middle" fill="#fb7185" font-size="9" font-weight="600">Live Logging &amp; Accounting</text>
+      </g>
+      <g transform="translate(848, 225)">
+        <rect x="0" y="0" width="247" height="125" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+        <text x="123" y="17" text-anchor="middle" fill="#64748b" font-size="7" font-weight="600">TRADING &amp; OPERATIONS</text>
+        <text x="10" y="35" fill="#fb7185" font-size="7">•</text>
+        <text x="18" y="35" fill="#94a3b8" font-size="6">Order submission &amp; tracking</text>
+        <text x="10" y="51" fill="#fb7185" font-size="7">•</text>
+        <text x="18" y="51" fill="#94a3b8" font-size="6">Mark-to-Market (MtM) analysis</text>
+        <text x="10" y="67" fill="#fb7185" font-size="7">•</text>
+        <text x="18" y="67" fill="#94a3b8" font-size="6">Modes: off / dry_run / live</text>
+        <text x="10" y="83" fill="#fb7185" font-size="7">•</text>
+        <text x="18" y="83" fill="#94a3b8" font-size="6">PnL tracking &amp; trade journaling</text>
+        <text x="10" y="99" fill="#fb7185" font-size="7">•</text>
+        <text x="18" y="99" fill="#94a3b8" font-size="6">Live telemetry &amp; health checks</text>
+        <text x="10" y="115" fill="#fb7185" font-size="7">•</text>
+        <text x="18" y="115" fill="#94a3b8" font-size="6">Portfolio cost basis accounting</text>
+      </g>
+
+      <!-- ARROWS -->
+      <path d="M 190 110 L 213 110 L 213 89  L 237 89"  fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arr2)"/>
+      <path d="M 190 210 L 213 210 L 213 142 L 237 142" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arr2)"/>
+      <path d="M 190 315 L 213 315 L 213 195 L 237 195" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arr2)"/>
+      <path d="M 190 405 L 213 405 L 213 248 L 237 248" fill="none" stroke="#64748b" stroke-width="1.2" marker-end="url(#arr2)"/>
+
+      <path d="M 374 89  L 395 89  L 395 92  L 421 92"  fill="none" stroke="#fbbf24" stroke-width="1.3" marker-end="url(#arr-am)"/>
+      <path d="M 374 142 L 395 142 L 395 92  L 421 92"  fill="none" stroke="#fbbf24" stroke-width="1.3" marker-end="url(#arr-am)"/>
+      <path d="M 374 195 L 395 195 L 395 157 L 421 157" fill="none" stroke="#fbbf24" stroke-width="1.3" marker-end="url(#arr-am)"/>
+      <path d="M 374 248 L 395 248 L 395 157 L 421 157" fill="none" stroke="#fbbf24" stroke-width="1.3" marker-end="url(#arr-am)"/>
+
+      <path d="M 574 92  L 597 92  L 597 102 L 623 102" fill="none" stroke="#34d399" stroke-width="1.3" marker-end="url(#arr-em)"/>
+      <path d="M 574 157 L 597 157 L 597 102 L 623 102" fill="none" stroke="#34d399" stroke-width="1.3" marker-end="url(#arr-em)"/>
+
+      <path d="M 796 102 L 819 102 L 819 92  L 845 92"  fill="none" stroke="#a78bfa" stroke-width="1.3" marker-end="url(#arr-vi)"/>
+
+      <path d="M 971 110 L 971 120" fill="none" stroke="#fb7185" stroke-width="1.3" marker-end="url(#arr-ro)"/>
+      <path d="M 971 160 L 971 170" fill="none" stroke="#fb7185" stroke-width="1.3" marker-end="url(#arr-ro)"/>
+      <path d="M 971 210 L 971 225" fill="none" stroke="#fb7185" stroke-width="1.3" marker-end="url(#arr-ro)"/>
+
+      <!-- Labels at the bottom -->
+      <g transform="translate(570, 505)">
+          <text x="0" y="0" text-anchor="middle" fill="#64748b" font-size="10" font-weight="600" letter-spacing="2">PREFECT WORKFLOW ORCHESTRATION</text>
+          <text x="0" y="20" text-anchor="middle" fill="#475569" font-size="8">Daily scheduled runs for ingestion &amp; trading • Server deployment • Automated retries &amp; monitoring</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot cyan"></div>
+        <h3>Ingestion & Features</h3>
+      </div>
+      <ul>
+        <li>Multi-source weather & market intake</li>
+        <li>Point-in-Time (PIT) data integrity</li>
+        <li>Cross-timezone temporal alignment</li>
+        <li>Lagged observations & bias features</li>
+        <li>Automated manifest file indexing</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot violet"></div>
+        <h3>Modeling & Validation</h3>
+      </div>
+      <ul>
+        <li>Probabilistic quantile forecasting</li>
+        <li>Walk-forward backtesting pipeline</li>
+        <li>Out-of-sample PnL evaluation</li>
+        <li>SHAP-based feature attribution</li>
+        <li>Time-series aware validation splits</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div class="card-dot rose"></div>
+        <h3>Execution & Logic</h3>
+      </div>
+      <ul>
+        <li>Automated order submission flow</li>
+        <li>Portfolio Mark-to-Market (MtM)</li>
+        <li>Real-time trade journaling & logs</li>
+        <li>Multi-mode (Dry/Live) controller</li>
+        <li>Live system telemetry & monitoring</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">Weather Prediction Markets &middot; Kalshi Temperature Event Contracts &middot; LightGBM &middot; Prefect</div>
+</div>
+</body>
+</html>
