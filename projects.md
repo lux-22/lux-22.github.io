@@ -89,9 +89,8 @@ Developed an end-to-end systematic research platform for probabilistic forecasti
 </div>
 
 <div class="ascii-diagram">
- BACKTEST DESIGN
+ BACKTEST (out-of-sample: 2026-01-01 to 2026-03-31)
  ───────────────
-
  Train / test split     ≤ 2025-12-31  /  2026-01-01 →
  Markets                20 stations across 4 US time zones
  Validation             Rolling-origin walk-forward (30-day step, 14-day window)
@@ -99,18 +98,13 @@ Developed an end-to-end systematic research platform for probabilistic forecasti
  Decision snapshot      Station-local midnight; cross-timezone aligned
  Transaction costs      Kalshi taker fee; YES ask-side execution
  Position sizing        1 contract / binary 0–1 outcome / no compounding
-
-
- SIGNAL QUALITY  (OOS: 2026-01-01 → 2026-03-31)
  ──────────────────────────────────────────────
-
  Pearson IC t-stat      3.16  (p &lt; 0.01)
  IC IR                  0.34
  Win rate by decile     24.8% → 59.0%
  Daily Sharpe           0.47
  Positive IC days       62.9%  (91 trading days)
  Trades                 1,046
-
 </div>
 <!--
 → Full methodology and charts in the research note
