@@ -93,17 +93,17 @@ Developed an end-to-end systematic research platform for probabilistic forecasti
  ───────────────
  Train / test split     ≤ 2025-12-31  /  2026-01-01 →
  Markets                20 stations across 4 US time zones
- Validation             Rolling-origin walk-forward (30-day step, 14-day window)
- Point-in-Time          No lookahead; all features from data available at decision time
+ Validation             Rolling-origin walk-forward
+ Point-in-Time          All features from data available at decision time
  Decision snapshot      Station-local midnight; cross-timezone aligned
  Transaction costs      Kalshi taker fee; YES ask-side execution
  Position sizing        1 contract / binary 0–1 outcome / no compounding
  ──────────────────────────────────────────────
- Pearson IC t-stat      3.16  (p &lt; 0.01)
+ Pearson IC t-stat      3.16
  IC IR                  0.34
  Win rate by decile     24.8% → 59.0%
  Daily Sharpe           0.47
- Positive IC days       62.9%  (91 trading days)
+ Positive IC days       62.9%
  Trades                 1,046
 </div>
 <!--
