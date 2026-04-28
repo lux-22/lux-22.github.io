@@ -88,16 +88,6 @@ Developed an end-to-end systematic research platform for probabilistic forecasti
                    └─────────┘                         └───────────┘      └──────────┘
 </div>
 
-- <strong>Data &amp; research layer:</strong> Multi-source alt-data ingestion, feature engineering, and probabilistic signal modeling with walk-forward validation. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
-
-- <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
-- <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
-
-
-<div style="margin-top: 10px;">
-  <a href="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" target="_blank">View high-fidelity interactive architecture diagram &rarr;</a>
-</div>
-
 <div class="ascii-diagram">
  BACKTEST DESIGN
  ───────────────
@@ -121,7 +111,19 @@ Developed an end-to-end systematic research platform for probabilistic forecasti
  Positive IC days       62.9%  (91 trading days)
  Trades                 1,046
 
+</div>
+<!--
 → Full methodology and charts in the research note
+-->
+
+- <strong>Data &amp; research layer:</strong> Multi-source alt-data ingestion, feature engineering, and probabilistic signal modeling with walk-forward validation. Repository: <a href="https://github.com/lux-22/weather_prediction" target="_blank" rel="noopener">github.com/lux-22/weather_prediction</a>.
+
+- <strong>Market microstructure and strategy layer:</strong> Supports live order-book ingestion, negative-risk logic, and inventory-aware quoting research to study pricing dynamics and market-making behavior. Repository: <a href="https://github.com/lux-22/kpmm" target="_blank" rel="noopener">github.com/lux-22/kpmm</a>.
+- <strong>Execution layer:</strong> Provides production-oriented tooling for automated order generation, scheduled runs, and deployment of strategy-driven trades. Repository: <a href="https://github.com/lux-22/autotrade" target="_blank" rel="noopener">github.com/lux-22/autotrade</a>.
+
+
+<div style="margin-top: 10px;">
+  <a href="{{ '/assets/files/weather_prediction_architecture.html' | relative_url }}" target="_blank">View high-fidelity interactive architecture diagram &rarr;</a>
 </div>
 
 <!--
