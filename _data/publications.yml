@@ -1,4 +1,22 @@
 main:
+  - title: "A dynamic ray method for ray-effect mitigation in fvDOM radiation model"
+    authors: Ning Ren, <strong>Xiaoyi Lu</strong>, Yi Wang
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute (2026): accepted."
+    category: computational fluid dynamics and combustion
+
+  - title: "Towards a highly scalable and parallel-efficient fire dynamics solver using GPUs"
+    authors: Zhiyu Chen, Runze Mao, <strong>Xiaoyi Lu</strong>, et al.
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute (2026): accepted."
+    category: computational fluid dynamics and combustion
+
+  - title: "A Conditional Source-term Estimation approach for turbulence-radiation interaction in eddy dissipation concept-based turbulent combustion simulations"
+    authors: <strong>Xiaoyi Lu*</strong>, et al.
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute (2026): accepted."
+    category: computational fluid dynamics and combustion
+
   - title: Machine learning accelerated radiative transfer modeling in CFD fire simulations
     authors: <strong>Xiaoyi Lu*</strong>, Mitchell Daneker, Lu Lu, Yi Wang
     conference_short: FSJ
