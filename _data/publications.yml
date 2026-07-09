@@ -5,16 +5,18 @@ main:
     conference: "Proceedings of the Combustion Institute (2026): accepted."
     category: computational fluid dynamics and combustion
 
-  - title: "Towards a highly scalable and parallel-efficient fire dynamics solver using GPUs"
-    authors: Zhiyu Chen, Runze Mao, <strong>Xiaoyi Lu</strong>, et al.
-    conference_short: PCI
-    conference: "Proceedings of the Combustion Institute (2026): accepted."
-    category: computational fluid dynamics and combustion
-
-  - title: "A Conditional Source-term Estimation approach for turbulence-radiation interaction in eddy dissipation concept-based turbulent combustion simulations"
+  - title: "A Conditional Source-term Estimation approach for modeling turbulence-radiation interaction in eddy dissipation concept-based fire simulations"
     authors: <strong>Xiaoyi Lu*</strong>, et al.
     conference_short: PCI
-    conference: "Proceedings of the Combustion Institute (2026): accepted."
+    conference: "Proceedings of the Combustion Institute 42 (2026): 106077."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S1540748926000751
+    category: computational fluid dynamics and combustion
+
+  - title: "Towards a highly scalable and extensible fire dynamics solver using GPUs"
+    authors: Zhenyi Chen, Runze Mao, <strong>Xiaoyi Lu</strong>, et al.
+    conference_short: PCI
+    conference: "Proceedings of the Combustion Institute 42 (2026): 106094."
+    pdf: https://www.sciencedirect.com/science/article/abs/pii/S1540748926000921
     category: computational fluid dynamics and combustion
 
   - title: Machine learning accelerated radiative transfer modeling in CFD fire simulations
