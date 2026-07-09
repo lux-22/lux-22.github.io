@@ -1,0 +1,8 @@
+@article{lu2026accelerated,
+  title={Machine learning accelerated radiative transfer modeling in CFD fire simulations},
+  author={Xiaoyi Lu and Mitchell Daneker and Lu Lu and Yi Wang},
+  journal={Fire Safety Journal},
+  volume={163},
+  pages={104819},
+  year={2026}
+}

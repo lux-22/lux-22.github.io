@@ -1,0 +1,8 @@
+@article{lu2026conditional,
+  title={A Conditional Source-term Estimation approach for modeling turbulence-radiation interaction in eddy dissipation concept-based fire simulations},
+  author={Xiaoyi Lu and Ning Ren and Fatiha Nmira and Jean-Louis Consalvi and Yi Wang},
+  journal={Proceedings of the Combustion Institute},
+  volume={42},
+  pages={106077},
+  year={2026}
+}

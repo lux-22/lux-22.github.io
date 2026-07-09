@@ -1,0 +1,8 @@
+@article{chen2026fire,
+  title={Towards a highly scalable and extensible fire dynamics solver using GPUs},
+  author={Zhenyi Chen and Runze Mao and Xiaoyi Lu and Xuan Bai and Yi Wang and Zhi X. Chen},
+  journal={Proceedings of the Combustion Institute},
+  volume={42},
+  pages={106094},
+  year={2026}
+}

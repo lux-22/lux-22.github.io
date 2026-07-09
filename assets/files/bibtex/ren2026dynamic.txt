@@ -1,0 +1,7 @@
+@article{ren2026dynamic,
+  title={A dynamic ray method for ray-effect mitigation in fvDOM radiation model},
+  author={Ning Ren and Xiaoyi Lu and Yi Wang},
+  journal={Proceedings of the Combustion Institute},
+  year={2026},
+  note={Accepted}
+}

@@ -1,0 +1,7 @@
+@misc{jiao2026nested,
+  title={Nested Fourier-enhanced neural operator for efficient modeling of radiation transfer in fires},
+  author={Anran Jiao and Wenyao Jiang and Xiaoyi Lu and Yi Wang and Lu Lu},
+  year={2026},
+  eprint={2604.13919},
+  archivePrefix={arXiv}
+}
