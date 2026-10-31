@@ -1,0 +1,8 @@
+@misc{azema2026beyond,
+  title={Beyond Affine Reconstruction: Multi-Resolution Transformer DeepONets for the Radiative Transfer Equation},
+  author={Tanguy Az{\'e}ma and Marc Bocquet and Fatiha Nmira and Xiaoyi Lu and Jean-Louis Consalvi and Sibo Cheng},
+  year={2026},
+  eprint={2610.33668},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
+}

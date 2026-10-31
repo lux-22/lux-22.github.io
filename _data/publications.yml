@@ -1,8 +1,17 @@
 main:
-  - title: "A dynamic ray method for ray-effect mitigation in fvDOM radiation model"
-    authors: Ning Ren, <strong>Xiaoyi Lu</strong>, Yi Wang
+  - title: "Beyond Affine Reconstruction: Multi-Resolution Transformer DeepONets for the Radiative Transfer Equation"
+    authors: Tanguy Azéma, Marc Bocquet, Fatiha Nmira, <strong>Xiaoyi Lu</strong>, Jean-Louis Consalvi, Sibo Cheng
+    conference_short: arXiv
+    conference: "arXiv preprint arXiv:2610.33668 (2026)."
+    pdf: https://arxiv.org/abs/2610.33668
+    bibtex: ./assets/files/bibtex/azema2026beyond.txt
+    category: scientific machine learning
+
+  - title: "A dynamic method for overcoming the ray effects of DOM radiation model in fire spread simulations"
+    authors: Ning Ren, <strong>Xiaoyi Lu</strong>, Danyal Mohaddes, Alex Krisman, Yi Wang
     conference_short: PCI
-    conference: "Proceedings of the Combustion Institute (2026): accepted."
+    conference: "Proceedings of the Combustion Institute 42 (2026): 106339."
+    pdf: https://www.sciencedirect.com/science/article/pii/S1540748926003366
     bibtex: ./assets/files/bibtex/ren2026dynamic.txt
     category: computational fluid dynamics and combustion
 
